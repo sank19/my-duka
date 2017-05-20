@@ -22,7 +22,7 @@ class CSVFormatter(object):
 
 def write_tick(writer, tick):
     writer.writerow(
-        {'time': tick[0],
+        {'time_str': tick[0],
          'ask': format_float(tick[1]),
          'bid': format_float(tick[2]),
          'ask_volume': tick[3],
@@ -31,7 +31,7 @@ def write_tick(writer, tick):
 
 def write_candle(writer, candle):
     writer.writerow(
-        {'time': stringify(candle.timestamp),
+        {'time_str': stringify(candle.timestamp),
          'open': format_float(candle.open_price),
          'close': format_float(candle.close_price),
          'high': format_float(candle.high),
