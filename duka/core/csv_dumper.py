@@ -50,8 +50,8 @@ class CSVDumper:
 
     def get_header(self):
         if self.timeframe == TimeFrame.TICK:
-            return ['time', 'ask', 'bid', 'ask_volume', 'bid_volume']
-        return ['time', 'open', 'close', 'high', 'low']
+            return ['time_str', 'ask', 'bid', 'ask_volume', 'bid_volume']
+        return ['time_str', 'open', 'close', 'high', 'low']
 
     def append(self, day, ticks):
         previous_key = None
