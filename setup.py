@@ -18,7 +18,7 @@ setup(
     keywords=['dukascopy', 'forex', 'finance', 'historical data', 'price', 'currency'],
     entry_points={
         'console_scripts': [
-            'duka = duka.main:main',
+            'my-duka = my-duka.main:main',
         ],
     },
     classifiers=[
