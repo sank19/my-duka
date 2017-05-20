@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-NAME = "duka"
+NAME = "my-duka"
 VERSION = '0.2.1'
 
 setup(
