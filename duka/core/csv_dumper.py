@@ -23,10 +23,10 @@ class CSVFormatter(object):
 def write_tick(writer, tick):
     writer.writerow(
         {'time_str': tick[0],
-         'ask': format_float(tick[1]),
-         'bid': format_float(tick[2]),
-         'ask_volume': tick[3],
-         'bid_volume': tick[4]})
+         'Ask': format_float(tick[1]),
+         'Bid': format_float(tick[2]),
+         'AskVolume': tick[3],
+         'BidVolume': tick[4]})
 
 
 def write_candle(writer, candle):
@@ -50,7 +50,7 @@ class CSVDumper:
 
     def get_header(self):
         if self.timeframe == TimeFrame.TICK:
-            return ['time_str', 'ask', 'bid', 'ask_volume', 'bid_volume']
+            return ['time_str', 'Ask', 'Bid', 'AskVolume', 'BidVolume']
         return ['time_str', 'open', 'close', 'high', 'low']
 
     def append(self, day, ticks):
