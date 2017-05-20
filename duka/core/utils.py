@@ -72,7 +72,7 @@ def set_up_signals():
     signal.signal(signal.SIGINT, signal_handler)
 
 
-DATETIME_FORMAT = '%d.%m.%Y %H:%M:%S.%f'
+DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S.%f'
 
 
 def to_utc_timestamp(time_str):
