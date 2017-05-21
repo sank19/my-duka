@@ -60,7 +60,7 @@ def name(symbol, timeframe, start, end):
             ts_str = x
 
     #name = symbol + "_" + ts_str + "_" + str(start)
-    name = symbol + "TICK_" + str(start)[0:4] + str(start)[5:7] + str(start)[8:10]
+    name = symbol + "TICK_" + ts_str[0:4] + ts_str[5:7] + ts_str[8:10]
 
     if start != end:
         name += "_" + str(end)
