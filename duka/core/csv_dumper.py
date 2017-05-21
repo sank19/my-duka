@@ -5,7 +5,8 @@ from os.path import join
 from .candle import Candle
 from .utils import TimeFrame, stringify, Logger
 
-TEMPLATE_FILE_NAME = "{}-{}_{:02d}_{:02d}-{}_{:02d}_{:02d}.csv"
+#TEMPLATE_FILE_NAME = "{}-{}_{:02d}_{:02d}-{}_{:02d}_{:02d}.csv"
+TEMPLATE_FILE_NAME = "{}TICK_{}{:02d}{:02d}.csv"
 
 
 def format_float(number):
@@ -77,8 +78,7 @@ class CSVDumper:
 
     def dump(self):
         file_name = TEMPLATE_FILE_NAME.format(self.symbol,
-                                              self.start.year, self.start.month, self.start.day,
-                                              self.end.year, self.end.month, self.end.day)
+                                              self.start.year, self.start.month, self.start.day)
 
         Logger.info("Writing {0}".format(file_name))
 
