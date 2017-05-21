@@ -59,7 +59,8 @@ def name(symbol, timeframe, start, end):
         if getattr(TimeFrame, x) == timeframe:
             ts_str = x
 
-    name = symbol + "_" + ts_str + "_" + str(start)
+    #name = symbol + "_" + ts_str + "_" + str(start)
+    name = symbol + "TICK_" + str(start)[0:4] + str(start)[5:7] + str(start)[8:10]
 
     if start != end:
         name += "_" + str(end)
